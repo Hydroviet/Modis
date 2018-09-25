@@ -323,9 +323,12 @@ def predictAndVisualize_RandomCrop(which, reservoir_index, test_data, test_targe
     timeSteps = test_data.shape[1]
     input_seq = test_data[which]
     ground_truth = test_target[which]
+    
     offset_x = test_data.shape[2] % crop_size
     offset_y = test_data.shape[3] % crop_size
     input_seq = input_seq[:, offset_x//2:-(offset_x - offset_x//2), offset_y//2:-(offset_y - offset_y//2), :]
+    ground_truth = ground_truth[offset_x//2:-(offset_x - offset_x//2), offset_y//2:-(offset_y - offset_y//2), :]
+
     predict = np.zeros_like(ground_truth)
 
     for i in range(input_seq.shape[1] // crop_size):
