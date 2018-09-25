@@ -1,5 +1,5 @@
 #! /bin/bash
-dataFolder=$1
+dataFolder=$1 #MOD13Q1
 start=$2
 end=$3
 

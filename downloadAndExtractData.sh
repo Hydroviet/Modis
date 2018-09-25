@@ -32,6 +32,6 @@ cd $filename
             break
         fi 
     done
-} < ../$filename.csv
+} < ../DownloadFiles/$filename.csv
 
 cd ..
