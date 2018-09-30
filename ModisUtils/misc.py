@@ -111,7 +111,7 @@ def get_data_and_target_path(data_file, target_file):
 
 
 def get_im(path, reduceSize=None):
-    # reduceSize can be a tuple, example: (128, 96)
+    # reduceSize type is a tuple, example: (128, 96)
     img = misc.imread(path)
     # Reduce size
     if reduceSize is not None:
